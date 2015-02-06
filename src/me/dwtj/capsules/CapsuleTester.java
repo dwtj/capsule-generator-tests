@@ -3,11 +3,23 @@ package me.dwtj.capsules;
 @Capsule
 public class CapsuleTester
 {
-    public void foo() {
-        ;
+    private void zeroArgs() {
+        return;
     }
-    
-    public int zero() {
+
+    public void oneArg(int x) {
+        return;
+    }
+
+    public void twoArgs(int x, int y) {
+        return;
+    }
+
+    public int retInt() {
         return 0;
+    }
+
+    public Integer retInteger() {
+        return new Integer(0);
     }
 }
