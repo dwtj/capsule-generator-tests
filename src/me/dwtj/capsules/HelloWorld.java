@@ -1,5 +1,8 @@
 package me.dwtj.capsules;
 
+import java.lang.InterruptedException;
+import java.util.concurrent.ExecutionException;
+
 @Capsule
 public class HelloWorld
 {
@@ -20,5 +23,19 @@ public class HelloWorld
                 // TODO ???
             }
         }
+    }
+
+    public static void main(String[] argv) {
+        HelloWorldCapsule cap = new HelloWorldCapsule();
+        cap.start();
+
+        cap.helloWorld();
+        try {
+            cap.hello("capsules").get();
+        } catch (InterruptedException ex) {
+        } catch (ExecutionException ex) {
+        }
+        cap.helloWorldRepeat(5);
+        System.out.println("End of main.");
     }
 }
