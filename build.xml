@@ -1,13 +1,16 @@
 <project default="compile">
   <target name="compile">
-    <mkdir dir="bin"/>
-    <mkdir dir="generated_src"/>
-    <javac target="1.8" srcdir="src" destdir="bin">
+    <mkdir dir="build/classes"/>
+    <mkdir dir="build/generated_src"/>
+    <javac target="1.8" srcdir="src" destdir="build/classes">
       <compilerarg value="-s"/>
-      <compilerarg value="generated_src"/>
-			<classpath path="lib/capsule-generator.jar"/>
+      <compilerarg value="build/generated_src"/>
+      <classpath path="lib/capsule-generator.jar"/>
     </javac>
-    </target>
+  </target>
+  <target name="clean">
+    <delete dir="build"/>
+  </target>
 </project>
 
 

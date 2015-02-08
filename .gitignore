@@ -1,3 +1,2 @@
-bin/*
-generated_src/*
+build/*
 lib/*
