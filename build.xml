@@ -9,7 +9,10 @@
     </javac>
   </target>
   <target name="clean">
-    <delete dir="build"/>
+    <delete includeemptydirs="true">
+      <fileset dir="build/classes" includes="**/*"/>
+      <fileset dir="build/generated_src" includes="**/*"/>
+    </delete>
   </target>
 </project>
 
