@@ -1,7 +1,7 @@
 package me.dwtj.capsules;
 
 @Capsule
-public class CapsuleTester
+public class MethodShapes
 {
     private void zeroArgs() {
         return;
