@@ -1,5 +1,8 @@
 package me.dwtj.capsules;
 
+import org.paninij.lang.Capsule;
+
+
 @Capsule
 public class MethodShapes
 {

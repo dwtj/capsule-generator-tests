@@ -1,5 +1,6 @@
 package me.dwtj.capsules;
 
+import org.paninij.lang.Capsule;
 import java.lang.InterruptedException;
 import java.util.concurrent.ExecutionException;
 
@@ -26,8 +27,7 @@ public class HelloWorld
     }
 
     public static void main(String[] argv) {
-        HelloWorldCapsule cap = new HelloWorldCapsule();
-        cap.start();
+        HelloWorldCapsule cap = HelloWorldCapsule.make();
 
         cap.helloWorld();
         try {
